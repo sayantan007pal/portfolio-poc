@@ -3,20 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>if (localStorage.theme === 'light') document.documentElement.classList.add('light')</script>
-    <link rel="stylesheet" href="css/styles.css" />
+    <script>
+      if (localStorage.theme === "light")
+        document.documentElement.classList.add("light");
+    </script>
+
     <title>Sayantan Pal - Full-Stack & AI Systems Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Sayantan Pal, Associate Software Engineer at Prismforce. Builds AI-powered recruitment tools, voice AI interview agents, and full-stack systems with React, Node.js, Python and AWS."
+    />
+    <meta
+      name="keywords"
+      content="Sayantan, full-stack developer, software engineer, Pune, React, Node.js, TypeScript, Python, FastAPI, AWS, voice AI, Prismforce"
+    />
+    <meta name="author" content="Sayantan Pal" />
+
+    <link rel="canonical" href="https://sayantan-pal-dev.netlify.app/" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sayantan Pal",
+        "jobTitle": "Associate Software Engineer",
+        "worksFor": { "@type": "Organization", "name": "Prismforce" },
+        "url": "https://sayantan-pal-dev.netlify.app/",
+        "sameAs": [
+          "https://github.com/sayantan007pal",
+          "https://linkedin.com/in/sayantan-pal-05b99b125/"
+        ],
+        "knowsAbout": [
+          "Next.js",
+          "React",
+          "Node.js",
+          "TypeScript",
+          "Python",
+          "FastAPI",
+          "AWS",
+          "MongoDB",
+          "Docker",
+          "Git",
+          "Grafana/Loki",
+          "Kubernetes"
+        ]
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <div class="fall" aria-hidden="true">
-    <span class="fall__icon fall__icon--openai" style="--x:8%;--d:0s;--t:14s"><svg viewBox="0 0 24 24" ><use href="assets/icons/fall-icons.svg#openai"/></svg></span>
-    <span class="fall__icon fall__icon--cursor" style="--x:22%;--d:3s;--t:16s"><svg viewBox="0 0 24 24" ><use href="assets/icons/fall-icons.svg#cursor"/></svg></span>
-    <span class="fall__icon fall__icon--claude" style="--x:38%;--d:6s;--t:13s"><svg viewBox="0 0 24 24" ><use href="assets/icons/fall-icons.svg#claude"/></svg></span>
-    <span class="fall__icon fall__icon--ollama" style="--x:54%;--d:2s;--t:18s"><svg viewBox="0 0 24 24" ><use href="assets/icons/fall-icons.svg#ollama"/></svg></span>
-    <span class="fall__icon fall__icon--kimi" style="--x:70%;--d:8s;--t:15s"><svg viewBox="0 0 24 24" ><use href="assets/icons/fall-icons.svg#kimi"/></svg></span>
-    <span class="fall__icon fall__icon--vscode" style="--x:86%;--d:11s;--t:17s"><svg viewBox="0 0 100 100" ><use href="assets/icons/fall-icons.svg#vscode"/></svg></span>
+      <span
+        class="fall__icon fall__icon--openai"
+        style="--x: 8%; --d: 0s; --t: 14s"
+        ><svg viewBox="0 0 24 24">
+          <use href="assets/icons/fall-icons.svg#openai" /></svg
+      ></span>
+      <span
+        class="fall__icon fall__icon--cursor"
+        style="--x: 22%; --d: 3s; --t: 16s"
+        ><svg viewBox="0 0 24 24">
+          <use href="assets/icons/fall-icons.svg#cursor" /></svg
+      ></span>
+      <span
+        class="fall__icon fall__icon--claude"
+        style="--x: 38%; --d: 6s; --t: 13s"
+        ><svg viewBox="0 0 24 24">
+          <use href="assets/icons/fall-icons.svg#claude" /></svg
+      ></span>
+      <span
+        class="fall__icon fall__icon--ollama"
+        style="--x: 54%; --d: 2s; --t: 18s"
+        ><svg viewBox="0 0 24 24">
+          <use href="assets/icons/fall-icons.svg#ollama" /></svg
+      ></span>
+      <span
+        class="fall__icon fall__icon--kimi"
+        style="--x: 70%; --d: 8s; --t: 15s"
+        ><svg viewBox="0 0 24 24">
+          <use href="assets/icons/fall-icons.svg#kimi" /></svg
+      ></span>
+      <span
+        class="fall__icon fall__icon--vscode"
+        style="--x: 86%; --d: 11s; --t: 17s"
+        ><svg viewBox="0 0 100 100">
+          <use href="assets/icons/fall-icons.svg#vscode" /></svg
+      ></span>
     </div>
-  
+
     <header class="site-header">
       <nav class="nav">
         <a href="#top" class="nav__brand"
@@ -144,157 +225,204 @@
         </div>
       </section>
 
-<section class="work" id="experience">
-      <p class="eyebrow">//experience</p>
-      <h2>Prismforce</h2>
-      <p class="section-sub">Associate Software Engineer · Feb 2025 – Present · Pune, India</p>
-      <div class="work__grid">
-        <article class="card">
-          <p class="card__service">service: platform-architecture</p>
-          <h3>SelectPrism Platform Architecture</h3>
-          <p>Architected the SelectPrism recruitment platform from the
-             ground up, scaling to <strong>1,000+ concurrent interview
-             sessions</strong>. Optimized the API layer with MongoDB
-             schema validation and RTK Query caching, cutting average
-             response time from <strong>340ms to 220ms — a 35%
-             improvement</strong>.</p>
-          <ul class="tag-list tag-list--small">
-            <li>Node.js</li><li>TypeScript</li><li>MongoDB</li>
-          </ul>
-        </article>
-        <article class="card">
-          <p class="card__service">service: resume-parser</p>
-          <h3>Resume Parsing Pipeline</h3>
-          <p>Built an Ollama-powered local LLM parsing system, validated
-             against 500 manually labeled resumes — <strong>92% accuracy</strong>
-             on critical field extraction.</p>
-          <ul class="tag-list tag-list--small">
-            <li>FastAPI</li><li>Ollama</li><li>NLP</li>
-          </ul>
-        </article>
-        <article class="card">
-          <p class="card__service">service: proctoring-system</p>
-          <h3>AI Proctoring &amp; Anti-Cheat System</h3>
-          <p>YOLO-based face detection verifying a candidate is present and
-             attentive, paired with a "GPTness" layer flagging responses
-             that read as recited rather than reasoned live — reducing
-             flagged-session manual review time by an estimated
-             <strong>[XX]%</strong>. Owned the report's frontend end to
-             end, from Figma to production.</p>
-          <ul class="tag-list tag-list--small">
-            <li>YOLOv8</li><li>Computer Vision</li><li>Next.js</li>
-          </ul>
-        </article>
-        <article class="card">
-          <p class="card__service">service: unified-pipeline-api</p>
-          <h3>Unified Interview Pipeline API</h3>
-          <p>Collapsed JD parsing, resume upload, interview creation and
-             link generation — four disconnected steps — into one Node.js
-             API, alongside client webhook integrations. Shipped as the
-             backbone of the GetKnit launch, cutting interview setup time
-             by an estimated <strong>[70]%</strong>.</p>
-          <ul class="tag-list tag-list--small">
-            <li>Node.js</li><li>API Design</li><li>Webhooks</li>
-          </ul>
-        </article>
-        <article class="card">
-          <p class="card__service">service: frontend-componentization</p>
-          <h3>Interview Frontend Componentization</h3>
-          <p>Led the breakup of a monolithic interview-side UI into a
-             reusable component library, cutting new-feature build time
-             by an estimated <strong>[XX]%</strong> and eliminating
-             duplicated view logic across the platform.</p>
-          <ul class="tag-list tag-list--small">
-            <li>Next.js</li><li>React</li><li>Design Systems</li>
-          </ul>
-        </article>
-        <article class="card">
-          <p class="card__service">service: auth-hardening</p>
-          <h3>Auth System Hardening</h3>
-          <p>Led remediation after a VAPT security audit — Redis-based
-             rate limiting, bcrypt password hashing, and reCAPTCHA v2 —
-             passing the follow-up audit with <strong>zero critical
-             vulnerabilities</strong>.</p>
-          <ul class="tag-list tag-list--small">
-            <li>Redis</li><li>Security</li><li>reCAPTCHA</li>
-          </ul>
-        </article>
-      </div>
-    </section>
+      <section class="work" id="experience">
+        <p class="eyebrow">//experience</p>
+        <h2>Prismforce</h2>
+        <p class="section-sub">
+          Associate Software Engineer · Feb 2025 – Present · Pune, India
+        </p>
+        <div class="work__grid">
+          <article class="card">
+            <p class="card__service">service: platform-architecture</p>
+            <h3>SelectPrism Platform Architecture</h3>
+            <p>
+              Architected the SelectPrism recruitment platform from the ground
+              up, scaling to
+              <strong>1,000+ concurrent interview sessions</strong>. Optimized
+              the API layer with MongoDB schema validation and RTK Query
+              caching, cutting average response time from
+              <strong>340ms to 220ms — a 35% improvement</strong>.
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>Node.js</li>
+              <li>TypeScript</li>
+              <li>MongoDB</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="card__service">service: resume-parser</p>
+            <h3>Resume Parsing Pipeline</h3>
+            <p>
+              Built an Ollama-powered local LLM parsing system, validated
+              against 500 manually labeled resumes —
+              <strong>92% accuracy</strong> on critical field extraction.
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>FastAPI</li>
+              <li>Ollama</li>
+              <li>NLP</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="card__service">service: proctoring-system</p>
+            <h3>AI Proctoring &amp; Anti-Cheat System</h3>
+            <p>
+              YOLO-based face detection verifying a candidate is present and
+              attentive, paired with a "GPTness" layer flagging responses that
+              read as recited rather than reasoned live — reducing
+              flagged-session manual review time by an estimated
+              <strong>[XX]%</strong>. Owned the report's frontend end to end,
+              from Figma to production.
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>YOLOv8</li>
+              <li>Computer Vision</li>
+              <li>Next.js</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="card__service">service: unified-pipeline-api</p>
+            <h3>Unified Interview Pipeline API</h3>
+            <p>
+              Collapsed JD parsing, resume upload, interview creation and link
+              generation — four disconnected steps — into one Node.js API,
+              alongside client webhook integrations. Shipped as the backbone of
+              the GetKnit launch, cutting interview setup time by an estimated
+              <strong>[70]%</strong>.
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>Node.js</li>
+              <li>API Design</li>
+              <li>Webhooks</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="card__service">service: frontend-componentization</p>
+            <h3>Interview Frontend Componentization</h3>
+            <p>
+              Led the breakup of a monolithic interview-side UI into a reusable
+              component library, cutting new-feature build time by an estimated
+              <strong>[XX]%</strong> and eliminating duplicated view logic
+              across the platform.
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>Next.js</li>
+              <li>React</li>
+              <li>Design Systems</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="card__service">service: auth-hardening</p>
+            <h3>Auth System Hardening</h3>
+            <p>
+              Led remediation after a VAPT security audit — Redis-based rate
+              limiting, bcrypt password hashing, and reCAPTCHA v2 — passing the
+              follow-up audit with
+              <strong>zero critical vulnerabilities</strong>.
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>Redis</li>
+              <li>Security</li>
+              <li>reCAPTCHA</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-    <section class="work" id="projects">
-      <p class="eyebrow">//projects</p>
-      <h2>Selected projects</h2>
-      <div class="work__grid">
-        <article class="card">
-          <p class="card__service">service: prismspark-hackathon</p>
-          <h3>AI Whiteboard Interview — PrismSpark '26</h3>
-          <p>Built and actually deployed — not just demoed — a live AI
-             whiteboard interview round with a team: real-time
-             problem-solving evaluation with GPTness detection baked in.
-             We bought a domain to ship it live. <strong>Won the Jury
-             Special Award.</strong></p>
-          <ul class="tag-list tag-list--small">
-            <li>Agentic AI</li><li>Hackathon</li><li>GPTness Detection</li>
-          </ul>
-        </article>
-        <article class="card">
-          <p class="card__service">service: questionify</p>
-          <h3>Questionify — Multi-Agent Assessment Platform</h3>
-          <p>Production-grade agentic pipeline — Research → Question
-             Generation → Judge — orchestrated over AWS SQS, evaluating
-             every generated question against <strong>6 quality
-             criteria</strong> before it reaches a candidate.</p>
-          <ul class="tag-list tag-list--small">
-            <li>Next.js</li><li>AWS SQS</li><li>Multi-Agent AI</li>
-          </ul>
-        </article>
-        <article class="card">
-          <p class="card__service">service: resume-matching</p>
-          <h3>AI Resume Matching Engine</h3>
-          <p>End-to-end semantic search pipeline — PDF parsing, Ollama
-             embeddings, MongoDB vector search — reaching <strong>88%
-             top-5 accuracy</strong> against 200 recruiter-labeled
-             job-resume pairs.</p>
-          <ul class="tag-list tag-list--small">
-            <li>Python</li><li>Ollama</li><li>Vector Search</li>
-          </ul>
-        </article>
-        <article class="card">
-          <p class="card__service">service: tennis-vision</p>
-          <h3>Tennis Analysis System</h3>
-          <p>Fine-tuned YOLOv8 for player tracking across <strong>1,200+
-             frames</strong> with persistent ID through occlusion, plus a
-             PyTorch CNN for court keypoint extraction at <strong>92%
-             accuracy</strong>.</p>
-          <ul class="tag-list tag-list--small">
-            <li>YOLOv8</li><li>PyTorch</li><li>OpenCV</li>
-          </ul>
-        </article>
-        <article class="card">
-          <p class="card__service">service: research</p>
-          <h3>Cardiac Risk Prediction — ML + IoT</h3>
-          <p>Co-authored and presented a framework combining edge IoT
-             sensor data with ML-powered anomaly detection for continuous,
-             real-time cardiac risk monitoring, at ICDEC 2025.</p>
-          <ul class="tag-list tag-list--small">
-            <li>Machine Learning</li><li>IoT</li><li>Published Research</li>
-          </ul>
-        </article>
-        <article class="card">
-          <p class="card__service">service: open-source</p>
-          <h3>stdlib.js — PR #8600</h3>
-          <p>Fixed a DevContainer "no space left on device" build failure
-             on a <strong>12.5k★</strong> repo — a broken ShellCheck
-             dependency, a 10GB+ base image over the 32GB Codespaces
-             limit, and missing Python support — unblocking
-             <strong>538+ contributors</strong>.</p>
-          <ul class="tag-list tag-list--small">
-            <li>Open Source</li><li>DevContainers</li>
-          </ul>
-        </article>
-      </div>
-    </section>
+      <section class="work" id="projects">
+        <p class="eyebrow">//projects</p>
+        <h2>Selected projects</h2>
+        <div class="work__grid">
+          <article class="card">
+            <p class="card__service">service: prismspark-hackathon</p>
+            <h3>AI Whiteboard Interview — PrismSpark '26</h3>
+            <p>
+              Built and actually deployed — not just demoed — a live AI
+              whiteboard interview round with a team: real-time problem-solving
+              evaluation with GPTness detection baked in. We bought a domain to
+              ship it live. <strong>Won the Jury Special Award.</strong>
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>Agentic AI</li>
+              <li>Hackathon</li>
+              <li>GPTness Detection</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="card__service">service: questionify</p>
+            <h3>Questionify — Multi-Agent Assessment Platform</h3>
+            <p>
+              Production-grade agentic pipeline — Research → Question Generation
+              → Judge — orchestrated over AWS SQS, evaluating every generated
+              question against <strong>6 quality criteria</strong> before it
+              reaches a candidate.
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>Next.js</li>
+              <li>AWS SQS</li>
+              <li>Multi-Agent AI</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="card__service">service: resume-matching</p>
+            <h3>AI Resume Matching Engine</h3>
+            <p>
+              End-to-end semantic search pipeline — PDF parsing, Ollama
+              embeddings, MongoDB vector search — reaching
+              <strong>88% top-5 accuracy</strong> against 200 recruiter-labeled
+              job-resume pairs.
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>Python</li>
+              <li>Ollama</li>
+              <li>Vector Search</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="card__service">service: tennis-vision</p>
+            <h3>Tennis Analysis System</h3>
+            <p>
+              Fine-tuned YOLOv8 for player tracking across
+              <strong>1,200+ frames</strong> with persistent ID through
+              occlusion, plus a PyTorch CNN for court keypoint extraction at
+              <strong>92% accuracy</strong>.
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>YOLOv8</li>
+              <li>PyTorch</li>
+              <li>OpenCV</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="card__service">service: research</p>
+            <h3>Cardiac Risk Prediction — ML + IoT</h3>
+            <p>
+              Co-authored and presented a framework combining edge IoT sensor
+              data with ML-powered anomaly detection for continuous, real-time
+              cardiac risk monitoring, at ICDEC 2025.
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>Machine Learning</li>
+              <li>IoT</li>
+              <li>Published Research</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="card__service">service: open-source</p>
+            <h3>stdlib.js — PR #8600</h3>
+            <p>
+              Fixed a DevContainer "no space left on device" build failure on a
+              <strong>12.5k★</strong> repo — a broken ShellCheck dependency, a
+              10GB+ base image over the 32GB Codespaces limit, and missing
+              Python support — unblocking <strong>538+ contributors</strong>.
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>Open Source</li>
+              <li>DevContainers</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
       <section class="contact" id="contact">
         <p class="eyebrow">//contact</p>
@@ -311,7 +439,6 @@
           data-netlify="true"
           netlify-honeypot="bot-field"
         >
-
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required />
 
@@ -363,6 +490,6 @@
     <footer>
       <p>&copy; 2026 Sayantan Pal. All rights reserved.</p>
     </footer>
-     <script src="js/main.js" defer></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>
