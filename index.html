@@ -9,47 +9,63 @@
   <body>
     <header class="site-header">
       <nav class="nav">
-        <a href="#top" class="nav__brand">Sayantan<span class="nav__brand-dim">.Pal</span></a>
+        <a href="#top" class="nav__brand"
+          >Sayantan<span class="nav__brand-dim">.Pal</span></a
+        >
 
-    <ul class="nav__menu" id="navMenu">
-      <li><a href="#about" class="nav__link">About</a></li>
-      <li><a href="#work" class="nav__link">Work</a></li>
-      <li><a href="#skills" class="nav__link">Skills</a></li>
-      <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
-      <li><button type="button" class="nav__link" id="themeToggle"></button></li>
-    </ul>
+        <ul class="nav__menu" id="navMenu">
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#work" class="nav__link">Work</a></li>
+          <li><a href="#skills" class="nav__link">Skills</a></li>
+          <li>
+            <a href="#contact" class="nav__link nav__link--cta">Contact</a>
+          </li>
+          <li>
+            <button type="button" class="nav__link" id="themeToggle"></button>
+          </li>
+        </ul>
       </nav>
     </header>
     <main id="main">
+      <section class="hero" id="top">
+        <div class="hero__text">
+          <p class="eyebrow">// full-stack &amp; ai systems engineer</p>
+          <h1>Sayantan<br />Pal</h1>
+          <p class="hero__sub">
+            I build full-stack AI-powered systems and currently at
+            <strong>Prismforce</strong>, working on
+            <strong>Selectprism</strong>, an AI recruitment platform.
+          </p>
+          <figure class="hero__visual">
+            <img
+              src="assets/sayantan-image.jpg"
+              width="800"
+              height="800"
+              class="waveform"
+              alt="Sayantan Pal"
+            />
+          </figure>
 
-    <section class="hero" id="top">
-      <div class="hero__text">
-        <p class="eyebrow">// full-stack &amp; ai systems engineer</p>
-        <h1>Sayantan<br>Pal</h1>
-        <p class="hero__sub">
-          I build full-stack AI-powered systems and currently at
-          <strong>Prismforce</strong>, working on <strong>Selectprism</strong>, an AI recruitment platform.
-        </p>
-        <figure class="hero__visual">
-          <img src="assets/sayantan-image.jpg" width="800" height="800" class="waveform" alt="Sayantan Pal" />
-        </figure>
+          <div class="ticker">
+            <span class="ticker__prompt">$</span>
+            <span class="ticker__text" id="tickerText"></span
+            ><span class="ticker__cursor">▍</span>
+          </div>
 
-        <div class="ticker">
-          <span class="ticker__prompt">$</span>
-          <span class="ticker__text" id="tickerText"></span><span class="ticker__cursor">▍</span>
+          <div class="hero__actions">
+            <a href="#work" class="btn btn--primary">View work</a>
+            <a
+              href="https://drive.google.com/file/d/1gIsnDQEmI83tmYSz5s_uewDQI7IBHpvU/view?usp=sharing"
+              class="btn btn--ghost"
+              >Resume</a
+            >
+          </div>
         </div>
-
-        <div class="hero__actions">
-          <a href="#work" class="btn btn--primary">View work</a>
-          <a href="https://drive.google.com/file/d/1gIsnDQEmI83tmYSz5s_uewDQI7IBHpvU/view?usp=sharing" class="btn btn--ghost">Resume</a>
-        </div>
-      </div>
-
-    </section>
+      </section>
 
       <section>
         <div class="about" id="about">
-            <p class="eyebrow">//about me</p>
+          <p class="eyebrow">//about me</p>
           <h2>A bit about how I work</h2>
           <div class="about__grid">
             <p>
@@ -71,7 +87,6 @@
           </div>
         </div>
       </section>
-
 
       <section class="skills" id="skills">
         <p class="eyebrow">//stack</p>
@@ -119,14 +134,193 @@
         </div>
       </section>
 
-      <section id="work" class="work">
-        <p class="eyebrow">//selected work</p>
-        <h2>Projects I'm proud of</h2>
+      <section class="work" id="work">
+        <p class="eyebrow">work</p>
+        <h2>Selected projects</h2>
         <div class="work__grid">
-          <div class="work__item">
-            <h3>Project 1</h3>
-          </div>
+          <article class="card">
+            <p class="card__service">service: proctoring-system</p>
+            <h3>AI Proctoring &amp; Anti-Cheat System</h3>
+            <p>
+              YOLO-based face detection verifying a candidate is present and
+              attentive, paired with a "GPTness" layer that flags responses that
+              read as recited from an AI answer rather than reasoned live. Owned
+              the resulting report's frontend end to end, from Figma to
+              production.
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>YOLOv8</li>
+              <li>Computer Vision</li>
+              <li>Next.js</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="card__service">service: unified-pipeline-api</p>
+            <h3>Unified Interview Pipeline API</h3>
+            <p>
+              Collapsed JD parsing, resume upload, interview creation and link
+              generation — previously several disconnected steps — into one
+              Node.js API, alongside client webhook integrations. Shipped as the
+              backbone of the GetKnit launch.
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>Node.js</li>
+              <li>API Design</li>
+              <li>Webhooks</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="card__service">service: resume-parser</p>
+            <h3>Resume Parsing Pipeline</h3>
+            <p>
+              Document processing pipeline using FastAPI and Unstructured.io to
+              extract structured candidate data at scale, backed by SQS and S3.
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>FastAPI</li>
+              <li>Unstructured.io</li>
+              <li>AWS SQS</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="card__service">service: frontend-componentization</p>
+            <h3>Interview Frontend Componentization</h3>
+            <p>
+              Led the breakup of a monolithic interview-side UI into a reusable
+              component library, cutting time-to-ship on future features instead
+              of rebuilding views from scratch each time.
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>Next.js</li>
+              <li>React</li>
+              <li>Design Systems</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="card__service">service: auth-hardening</p>
+            <h3>Auth System Hardening</h3>
+            <p>
+              Led remediation after a VAPT security audit — added CAPTCHA and
+              multi-layer Redis-based rate limiting across the auth flow.
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>Redis</li>
+              <li>Cloudflare Turnstile</li>
+              <li>Security</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="card__service">service: prismspark-hackathon</p>
+            <h3>AI Whiteboard Interview — PrismSpark '26</h3>
+            <p>
+              Built and actually deployed — not just demoed — a live AI
+              whiteboard interview round with a team: real-time problem-solving
+              evaluation with GPTness detection baked in. We bought a domain to
+              ship it live. Won the Jury Special Award.
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>Agentic AI</li>
+              <li>Hackathon</li>
+              <li>GPTness Detection</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="card__service">service: research</p>
+            <h3>Cardiac Risk Prediction — ML + IoT</h3>
+            <p>
+              Co-authored and presented a framework combining edge IoT sensor
+              data with ML-powered anomaly detection for continuous, real-time
+              cardiac risk monitoring, at ICDEC 2025.
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>Machine Learning</li>
+              <li>IoT</li>
+              <li>Published Research</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="card__service">service: open-source</p>
+            <h3>stdlib.js — PR #8600</h3>
+            <p>
+              Fixed a DevContainer "no space left on device" build failure on a
+              12.5k★ repo — a broken ShellCheck dependency, a 10GB+ base image
+              over the 32GB Codespaces limit, and missing Python support —
+              unblocking 538+ contributors.
+            </p>
+            <ul class="tag-list tag-list--small">
+              <li>Open Source</li>
+              <li>DevContainers</li>
+            </ul>
+          </article>
         </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <p class="eyebrow">contact</p>
+        <h2>Let's talk</h2>
+        <p class="contact__lead">
+          Open to interesting problems, collaborations, and roles. Reach out
+          below or find me on the links.
+        </p>
+
+        <form
+          class="form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden-field">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit" class="btn btn--primary">Send message</button>
+        </form>
+
+        <ul class="social-links">
+          <li>
+            <a
+              href="https://github.com/sayantan007pal"
+              target="_blank"
+              rel="noopener"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/sayantan-pal-05b99b125/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://leetcode.com/sayantanpal100/"
+              target="_blank"
+              rel="noopener"
+              >LeetCode</a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:sayantanpal100@gmail.com"
+              target="_blank"
+              rel="noopener"
+              >Email</a
+            >
+          </li>
+        </ul>
       </section>
     </main>
     <footer>
