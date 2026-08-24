@@ -1,0 +1,40 @@
+/*icon falling animation*/
+.fall {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+main,
+.site-footer {
+  position: relative;
+  z-index: 1;
+}
+.fall__icon {
+  position: absolute;
+  left: var(--x);
+  top: -3rem;
+  width: 1.5rem;
+  animation: fall var(--t) var(--d) linear infinite;
+}
+.fall__icon svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* White icons is converted to black on light theme for better visibility */
+html.light .fall__icon--openai svg,
+html.light .fall__icon--ollama svg,
+html.light .fall__icon--kimi svg {
+  filter: invert(1);
+}
+@keyframes fall {
+  0%   { transform: translateY(0);     opacity: 0; }
+  12%  { opacity: 0.5; }
+  80%  { opacity: 0.5; }
+  100% { transform: translateY(110vh); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fall { display: none; }
+}
