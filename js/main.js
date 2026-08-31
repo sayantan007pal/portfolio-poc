@@ -11,15 +11,18 @@ const pipelines = [
 ];
 
 const tickerEl = document.getElementById("tickerText");
+const tickerBox = tickerEl.closest(".hero-text-ticker");
 
 async function runTicker() {
   let i = 0;
   while (true) {
     const line = pipelines[i % pipelines.length];
 
-      await typeText(line);
-      await wait(1800);
-      await eraseText();
+    await typeText(line);
+    tickerBox.classList.add("is-waiting");
+    await wait(1800);
+    tickerBox.classList.remove("is-waiting");
+    await eraseText();
     i++;
   }
 }
