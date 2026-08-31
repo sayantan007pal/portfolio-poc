@@ -1,12 +1,19 @@
+
+    /* removes browser default spacing  */
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+ 
+ 
  /* Keeping every color/font as a CSS variable   */
 :root {
-  --ink:        #10141F;   /* page background */
-  --panel:      #171C2A;   /* card / raised surface background */
-  --paper:      #F3F1EA;   /* primary text on dark background */
-  --muted:      #8A93A6;   /* secondary text */
-  --signal:     #E9A23B;   /* accent: amber "signal lamp" */
-  --signal-dim: #C97D1E;   /* accent hover/active state */
-  --line:       rgba(243, 241, 234, 0.12); /* subtle borders */
+  --ink:        #10141F;   
+  --panel:      #171C2A;   
+  --paper:      #F3F1EA;   
+  --muted:      #8A93A6;   
+  --signal:     #E9A23B;   
+  --signal-dim: #C97D1E;   
+  --line:       rgba(243, 241, 234, 0.12); 
 
   --font-display: 'Space Grotesk', sans-serif;
   --font-body:    'IBM Plex Sans', sans-serif;
@@ -20,20 +27,17 @@
 
   --max-w: 1100px;
 }
-
+/* colors on light theme */
 html.light {
   --ink:   #F3F1EA;
   --panel: #E7E3D6;
   --paper: #10141F;
   --muted: #5C6578;
   --line:  rgba(16, 20, 31, 0.12);
+  --signal: rgb(232, 85, 12);
 }
 
-/*
-    removes browser default spacing 
-*/
-*, *::before, *::after { box-sizing: border-box; }
-* { margin: 0; padding: 0; }
+
 
 body {
   background: var(--ink);
@@ -65,6 +69,9 @@ h3 { font-size: var(--step-1); margin-bottom: 0.5rem; }
   color: var(--signal);
   letter-spacing: 0.02em;
   margin-bottom: 0.75rem;
+}
+html.light .eyebrow {
+  color: var(--signal); 
 }
 
 /* Visible keyboard focus */
@@ -116,11 +123,7 @@ main,
   width: 1.5rem;
   animation: fall var(--t) var(--d) linear infinite;
 }
-.fall__icon svg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+
 /* White icons converted to black on light theme */
 html.light .fall__icon--openai svg,
 html.light .fall__icon--ollama svg,
@@ -354,14 +357,7 @@ html.light #themeToggle::before { content: "☾"; } /* light page → moon = swi
 .social-links a { color: var(--muted); }
 .social-links a:hover { color: var(--signal); }
 
-/* FOOTER */
-.site-footer {
-  text-align: center;
-  padding: 2rem 1.5rem;
-  color: var(--muted);
-  font-size: 0.85rem;
-  border-top: 1px solid var(--line);
-}
+
 
 /* BREAKPOINT 1 — ~600px (tablets, large phones) */
 @media (min-width: 600px) {
@@ -397,4 +393,13 @@ html.light #themeToggle::before { content: "☾"; } /* light page → moon = swi
 
   .skills__grid { grid-template-columns: repeat(3, 1fr); }
   .work__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* FOOTER */
+.site-footer {
+  text-align: center;
+  max-width:100vw ;
+  padding: 20px 20px;
+  background: var(--ink);
+  border-top: 1px solid var(--line);  
 }
