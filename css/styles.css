@@ -148,7 +148,7 @@ html.light .fall__icon--kimi svg {
   border-bottom: 1px solid var(--line);
 }
 
-.nav {
+.nav-bar {
   max-width:100vw ;
   margin-inline: auto;
   padding: 20px 20px;
@@ -156,17 +156,17 @@ html.light .fall__icon--kimi svg {
 
 }
 
-.nav__brand__dim { color: var(--signal); }
+.nav-bar-menu-name-dim { color: var(--signal); }
 
 
-.nav__menu button {
+.nav-bar-menu button {
   background: none;
   border: 0;
-  font: inherit;
+  appearance: none;
   cursor: pointer;
 }
 
-.nav__menu {
+.nav-bar-menu {
   display: flex;
   gap: 1rem;
   font-family: var(--font-mono);
@@ -174,14 +174,16 @@ html.light .fall__icon--kimi svg {
   justify-content: center;
 }
 
-.nav__link--cta {
+.nav-bar-menu-items-contact {
   color: var(--signal);
 }
 
 #themeToggle {
-  font-size: 2em;
+  font-size: var(--step-0);
   line-height: 1;
   color: var(--signal);
+  max-height: 1.2em;
+  overflow: hidden;
 }
 #themeToggle::before { content: "☀"; }          /* dark page → sun = switch to light */
 html.light #themeToggle::before { content: "☾"; } /* light page → moon = switch to dark */
@@ -371,7 +373,7 @@ html.light #themeToggle::before { content: "☾"; } /* light page → moon = swi
    BREAKPOINT-2 - 900px (small laptops and up)
 */
 @media (min-width: 900px) {
-  .nav__menu { gap: 2.5rem; font-size: 0.95rem; }
+  .nav-bar-menu { gap: 2.5rem; font-size: 0.95rem; }
 
   .hero {
     padding-top: 5rem;
