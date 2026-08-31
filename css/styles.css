@@ -12,7 +12,7 @@
   --font-body:    'IBM Plex Sans', sans-serif;
   --font-mono:    'IBM Plex Mono', monospace;
 
-  /* clamp(min, preferred, max) gives "fluid" type */
+  /* clamp(min, preferred, max) */
   --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
   --step-1: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
   --step-2: clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem);
@@ -30,8 +30,7 @@ html.light {
 }
 
 /*
-   RESET — removes browser default spacing so we start
-   from a predictable baseline.
+    removes browser default spacing 
 */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; padding: 0; }
@@ -68,7 +67,7 @@ h3 { font-size: var(--step-1); margin-bottom: 0.5rem; }
   margin-bottom: 0.75rem;
 }
 
-/* Visible keyboard focus — accessibility basic that's easy to forget */
+/* Visible keyboard focus */
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
   outline: 2px solid var(--signal);
   outline-offset: 3px;
@@ -96,7 +95,7 @@ section {
 }
 
 /*
-   FALLING AI ICONS — decorative page background
+   FALLING AI ICONS
  */
 .fall {
   position: fixed;
@@ -137,9 +136,7 @@ html.light .fall__icon--kimi svg {
 
 
 /*
-   HEADER / NAV
-   Mobile-first: by default the menu is a full-height panel
-   that's hidden off-screen.
+   HEADER 
    The @media block near the bottom turns it back into a
    normal horizontal row once there's room.*/
 .site-header {
