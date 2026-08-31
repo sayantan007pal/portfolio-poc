@@ -266,7 +266,7 @@ html.light .nav-bar-theme::before {
 
 .hero-text-ticker {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
   min-height: 2.6em;
   margin-top: 1.75rem;
@@ -283,7 +283,16 @@ html.light .nav-bar-theme::before {
   color: var(--muted);
 }
 
+.hero-text-ticker-line {
+  flex: 1;
+  min-width: 0;
+}
+
 .hero-text-ticker-cursor {
+  display: inline;
+}
+
+.hero-text-ticker.is-waiting .hero-text-ticker-cursor {
   animation: blink 1s step-end infinite;
 }
 
