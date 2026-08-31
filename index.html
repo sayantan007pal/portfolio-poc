@@ -66,6 +66,7 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <div class="fall">
       <span
         class="fall__icon fall__icon--openai"
@@ -120,38 +121,37 @@
             <a href="#contact" class="nav-bar-menu-items nav-bar-menu-items-contact">Contact</a>
           </li>
           <li>
-            <button type="button" class="nav__link" id="themeToggle"></button>
+            <button type="button" id="themeToggle"></button>
           </li>
         </ul>
       </nav>
     </header>
     <main id="main">
       <section class="hero" id="top">
-        <div class="hero__text">
+        <div class="hero-text">
           <p class="eyebrow">// full-stack &amp; ai systems engineer</p>
           <h1>Sayantan<br />Pal</h1>
-          <p class="hero__sub">
+          <p class="hero-text-description">
             I build full-stack AI-powered systems and currently at
             <strong>Prismforce</strong>, working on
             <strong>Selectprism</strong>, an AI recruitment platform.
           </p>
-          <figure class="hero__visual">
+          <figure class="hero-text-visual">
             <img
               src="assets/sayantan-image.jpg"
               width="800"
               height="800"
-              class="waveform"
               alt="Sayantan Pal"
             />
           </figure>
 
-          <div class="ticker">
-            <span class="ticker__prompt">$</span>
-            <span class="ticker__text" id="tickerText"></span
-            ><span class="ticker__cursor">▍</span>
+          <div class="hero-text-ticker">
+            <span class="hero-text-ticker-prompt">$</span>
+            <span class="hero-text-ticker-text" id="tickerText"></span
+            ><span class="hero-text-ticker-cursor">▍</span>
           </div>
 
-          <div class="hero__actions">
+          <div class="hero-text-actions">
             <a href="#work" class="btn btn--primary">View work</a>
             <a
               href="https://drive.google.com/file/d/1gIsnDQEmI83tmYSz5s_uewDQI7IBHpvU/view?usp=sharing"
@@ -162,8 +162,7 @@
         </div>
       </section>
 
-      <section>
-        <div class="about" id="about">
+      <section class="about" id="about">
           <p class="eyebrow">//about me</p>
           <h2>A bit about how I work</h2>
           <div class="about__grid">
@@ -184,7 +183,6 @@
               contribute to open source when I find a good bug to chase.
             </p>
           </div>
-        </div>
       </section>
 
       <section class="skills" id="skills">
