@@ -145,24 +145,20 @@ main {
   animation: fall var(--t) var(--d) linear infinite;
 }
 
-html.light .fall-icon-openai svg,
-html.light .fall-icon-ollama svg,
-html.light .fall-icon-kimi svg {
+html.light .fall-light {
   filter: invert(1);
 }
 
 @keyframes fall {
-  0% {
+  from {
     transform: translateY(0);
     opacity: 0;
   }
-  12% {
-    opacity: 0.45;
-  }
+  12%,
   80% {
     opacity: 0.45;
   }
-  100% {
+  to {
     transform: translateY(110vh);
     opacity: 0;
   }
